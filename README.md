@@ -1,13 +1,13 @@
 # Udacity-Project-6
 In this project we configure and secure a Linux server and hosted our item catalog from Project 4
 
-IP Address: 52.55.254.90
-Port: 2200
-URL: http://52.55.254.90.xip.io/
+IP Address: 52.55.254.90  
+Port: 2200  
+URL: http://52.55.254.90.xip.io/  
 Software: 
-* 
+*   
 Third-Party Resources:
-* 
+*   
 
 SSH key was submitted in notes to reviewer field
 
