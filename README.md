@@ -62,8 +62,7 @@ SSH key was submitted in notes to reviewer field
 	* `sudo apt-get install libapache2-mod-wsgi-py3`
 	* `sudo touch /etc/apache2/sites-enabled/catalog.conf`
 	* `sudo nano /etc/apache2/sites-enabled/catalog.conf`
-		* 
-~~~~ 
+		* ~~~~ 
 <VirtualHost *:80>
   ServerName 52.55.254.90
   ServerAdmin mavaughn07@gmail.com
