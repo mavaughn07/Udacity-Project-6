@@ -94,7 +94,13 @@ SSH key was submitted in notes to reviewer field
 	* Do not allow remote connections
 	* Create a new database user named catalog that has limited permissions to your catalog application database.
 	* Since my database uses SQLite, I skipped this step in the server. If I were to configure, the steps would be below:
-		* 
+		* `sudo apt-get install postgresql`
+    	* `sudo su catalog -c 'createdb itemCatalog`
+		* `sudo su postgres -c 'psql'`
+		* `REVOKE connect ON DATABASE itemCatalog FROM PUBLIC;`
+		* `CREATE USER catalog with PASSWORD '[password]';`
+		* `GRANT connect ON DATABASE itemcatalog TO catalog;`
+		* I would then go in and change my SQLite engine creation in **views.py**, **models.py** and **createCatalog.py** to point to the new database, with username and password as arguments.
 12. Install git.
 	* `sudo apt-get install git`
 
