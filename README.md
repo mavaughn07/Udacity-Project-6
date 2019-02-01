@@ -62,22 +62,20 @@ SSH key was submitted in notes to reviewer field
 	* `sudo apt-get install libapache2-mod-wsgi-py3`
 	* `sudo touch /etc/apache2/sites-enabled/catalog.conf`
 	* `sudo nano /etc/apache2/sites-enabled/catalog.conf`
-		* <pre><code> 
-<VirtualHost *:80>
-  ServerName 52.55.254.90
-  ServerAdmin mavaughn07@gmail.com
-  WSGIDaemonProcess views user=grader python-home=/var/www/catalog python-path=$
-  WSGIScriptAlias / /var/www/catalog/wsgi.py
-  <Directory /var/www/catalog/>
-    WSGIProcessGroup views
-    WSGIApplicationGroup %{GLOBAL}
-    Require all granted
-  </Directory>
-  ErrorLog ${APACHE_LOG_DIR}/error.log
-  LogLevel warn
-  CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-</code></pre>
+		* ```<VirtualHost *:80>
+  				ServerName 52.55.254.90
+  				ServerAdmin mavaughn07@gmail.com
+  				WSGIDaemonProcess views user=grader python-home=/var/www/catalog python-path=$
+  				WSGIScriptAlias / /var/www/catalog/wsgi.py
+  				<Directory /var/www/catalog/>
+    				WSGIProcessGroup views
+    				WSGIApplicationGroup %{GLOBAL}
+    				Require all granted
+  				</Directory>
+  				ErrorLog ${APACHE_LOG_DIR}/error.log
+  				LogLevel warn
+  				CustomLog ${APACHE_LOG_DIR}/access.log combined
+			</VirtualHost>```
 		* I had issuse with what I thought was my configuration here, so I may have unnecessary information. Turns out that I had my import the wrong way around in my wsgi file
 	* `sudo a2ensite catalog`
 11. Install and configure PostgreSQL:
