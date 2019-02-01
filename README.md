@@ -115,7 +115,7 @@ SSH key was submitted in notes to reviewer field
 	* `sudo chown grader /var/www/catalog` 
 * Added authorised domain of xip.io in Google's console, so the log in function worked correctly
 
-Software:
+### Software:
 * Amazon Lightsail Ubuntu 16.04 server
 * Python3
 	* `sudo apt-get install python3-pip`
@@ -123,7 +123,7 @@ Software:
 	* `sudo pip3 install flask packaging oauth2client redis passlib flask-httpauth`
 	* `sudo pip3 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests`
 
-Third-Party Resources:
+### Third-Party Resources:
 * StackOverflow.com
 * DigitalOcean.com
 * Udacity Videos
