@@ -5,17 +5,6 @@ IP Address: 52.55.254.90
 Port: 2200  
 URL: http://52.55.254.90.xip.io/  
 SSH: ssh grader@52.55.254.90 -p 2200 -i ~/.ssh/graderkey
-Software:
-* Amazon Lightsail Ubuntu 16.04 server
-* Python3
-	* `sudo apt-get install python3-pip`
-* Various Python Modules
-	* `sudo pip3 install flask packaging oauth2client redis passlib flask-httpauth`
-	* `sudo pip3 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests`
-
-Third-Party Resources:
-* StackOverflow.com
-* DigitalOcean.com
 
 SSH key was submitted in notes to reviewer field
 
@@ -125,3 +114,16 @@ SSH key was submitted in notes to reviewer field
 * Changed the `/var/www/catalog` owner to grader, so database was no longer read only
 	* `sudo chown grader /var/www/catalog` 
 * Added authorised domain of xip.io in Google's console, so the log in function worked correctly
+
+Software:
+* Amazon Lightsail Ubuntu 16.04 server
+* Python3
+	* `sudo apt-get install python3-pip`
+* Various Python Modules
+	* `sudo pip3 install flask packaging oauth2client redis passlib flask-httpauth`
+	* `sudo pip3 install sqlalchemy flask-sqlalchemy psycopg2-binary bleach requests`
+
+Third-Party Resources:
+* StackOverflow.com
+* DigitalOcean.com
+* Udacity Videos
