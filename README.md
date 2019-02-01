@@ -35,6 +35,7 @@ SSH key was submitted in notes to reviewer field
 4. Change the SSH port from 22 to 2200. Make sure to configure the Lightsail firewall to allow it.
 	* Configured on instances networking page
 5. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).
+	* In `sudo nano /etc/ssh/sshd_config` change port to 2200
 	* `sudo ufw default deny incoming`
 	* `sudo ufw default allow outgoing`
 	* `sudo ufw allow 80`
@@ -109,6 +110,8 @@ SSH key was submitted in notes to reviewer field
 	* `sudo nano /etc/ssh/sshd_config`
 	* changed to `PermitRootLogin no`
 * Forced key-base login
+	* `sudo nano /etc/ssh/sshd_config`
+	* changed to `PasswordAuthentication no`
 * Changed references in the **views.py** **models.py** and **createCatalog.py** to absolute pathing for the **client-secrets.json** and **itemCatalog.db** files
 	* `/var/www/catalog/client_secrets.json'`
 	* `engine = create_engine('sqlite:////var/www/catalog/itemCatalog.db')`
