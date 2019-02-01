@@ -78,6 +78,17 @@ SSH key was submitted in notes to reviewer field
 			</VirtualHost>```
 		* I had issuse with what I thought was my configuration here, so I may have unnecessary information. Turns out that I had my import the wrong way around in my wsgi file
 	* `sudo a2ensite catalog`
+	* added **wsgi.py** to /var/www/catalog configured as below
+		* ```import sys
+				sys.path.insert(0, "/var/www/catalog")
+
+				from views import app as application
+
+				if __name__ == '__main__':
+    				application.config['SESSION_TYPE'] = 'filesystem'
+    				application.run(host='0.0.0.0', port=8000)``` 
+		* This is where my biggest trouble happened. My original file had the flask app from views being imported before /var/www/catalog was inserted to the path. 
+
 11. Install and configure PostgreSQL:
 	* Do not allow remote connections
 	* Create a new database user named catalog that has limited permissions to your catalog application database.
