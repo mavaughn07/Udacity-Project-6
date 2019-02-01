@@ -117,4 +117,5 @@ SSH key was submitted in notes to reviewer field
 	* `engine = create_engine('sqlite:////var/www/catalog/itemCatalog.db')`
 * Moved the **app.config['SECRET_KEY']** out of __main__ since it is not created
 * Changed the `/var/www/catalog` owner to grader, so database was no longer read only
+	* `sudo chown grader /var/www/catalog` 
 * Added authorised domain of xip.io in Google's console, so the log in function worked correctly
